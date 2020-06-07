@@ -55,6 +55,13 @@ function createGood(good) {
     if (localStorage.getItem('goodSum')){
         close.style.display = 'inline-flex';
     }
+    close.addEventListener('click', function () {
+        localStorage.clear();
+        rootElem.querySelector('.basket .count').innerText = 0;
+        rootElem.querySelector('.basket .sum').innerText = 0;
+        close.style.display = 'none';
+    })
+
 
     divContainer.addEventListener('click', function () {
         close.style.display = 'inline-flex';
@@ -82,7 +89,7 @@ function createGood(good) {
     // КОРЗИНА
     let basket = document.querySelector('.basket');
     basket.addEventListener('click', function () {
-        if (document.querySelector('.modal-container')){return}else {
+        if (document.querySelector('.modal-container')){document.querySelector('.modal-container').remove()}else {
             // ОТРИСОВКА ЗАГОЛОВКА КОРЗИНЫ
             let modalContainer = document.createElement('div');
             modalContainer.classList.add('modal-container');
