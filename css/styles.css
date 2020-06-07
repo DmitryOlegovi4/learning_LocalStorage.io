@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#root{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #dff9fb;
+    display: inline-block;
+}
+
+.container{
+    background-color: #c7ecee;
+    width: 50vw;
+    margin: 70px auto 10px;
+}
+.container p{
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+a{
+    color: black;
+    padding: 10px;
+    display: inline-block;
+    background-color: #f9ca24;
+    text-decoration: none;
+}
+nav{
+    height: 60px;
+    background-color: #f9ca24;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: absolute;
+    width: 90%;
+    justify-content: space-between;
+}
+.basketContainer{
+    background-color: #c7ecee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.basket{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.count{
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-color: #eb4d4b;
+    color: white;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.close{
+    display: none;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    color:#eb4d4b;
+    font-size: large;
+    background-color: black;
+    border-radius: 100%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#darkModeToggle{
+    background-color: #c7ecee;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#root.darkMode .container {
+    background-color: #130f40;
+    color: white;
+}
+
+.goods{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: space-around;
+}
+
+.good{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    background-color: #badc58;
+    margin: 30px 0;
+}
+.good:hover{
+    box-shadow: 5px 5px 10px;
+}
+
+.modal-container{
+    display: flex;
+    background-color: white;
+    width: 300px;
+    max-height: 300px;
+    overflow: auto;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px;
+    flex-direction: column;
+}
+.modalHeaderContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.modalHeaderContainer div:not(:last-child){
+    margin: 0 5px;
+    border-right: 1px dashed;
+}
+.modalHeaderContainer div:not(:first-child){
+    text-align: center
+}
+.modalElemContainer{
+    width: 100%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.modalElemContainer div:not(:last-child){
+    margin: 0 5px;
+    border-right: 1px dashed;
+}
+.modalElemContainer div:not(:first-child){
+    text-align: center
+}
+.modalTotalContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.modalTotalContainer div:not(:last-child){
+    margin: 0 10px;
+}
+.btnClose {
+    margin: 5px 10px 10px auto;
+}
